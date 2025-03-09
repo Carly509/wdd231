@@ -230,11 +230,32 @@ nav ul li a.active::after {
     flex: 1;
     max-width: 350px;
     position: relative;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.tier-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .tier-card.featured {
     transform: scale(1.05);
     border: 2px solid var(--primary-color);
+}
+
+.tier-card.featured:hover {
+    transform: scale(1.07) translateY(-5px);
+}
+
+.tier-card.selected {
+    border: 3px solid var(--accent-color);
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.tier-card.featured.selected {
+    transform: scale(1.05) translateY(-10px);
 }
 
 .featured-tag {
@@ -292,6 +313,32 @@ nav ul li a.active::after {
     text-align: center;
 }
 
+/* Selection Message */
+.selection-message {
+    background-color: var(--light-color);
+    border-left: 4px solid var(--accent-color);
+    padding: 20px;
+    margin: 40px auto;
+    max-width: 800px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.selection-message p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.continue-btn {
+    margin-top: 10px;
+}
+
 /* Testimonials */
 .testimonials {
     background-color: #F0F4F8;
@@ -316,4 +363,9 @@ nav ul li a.active::after {
 .testimonial p {
     font-style: italic;
     font-size: 1.1rem;
+}
+
+.icon-social {
+    width: 30px;
+    height: 30px;
 }
