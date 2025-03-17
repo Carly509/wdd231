@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paradise Chamber of Commerce</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <meta property="og:title" content="Participate - Paradise Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="img/logo.webp">
+    <meta property="og:url" content="https://yourwebsite.com">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="img/logo.webp" alt="Chamber of Commerce">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="membership.html">Membership</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="opportunities.html">Opportunities</a></li>
+                </ul>
+            </nav>
+            <div class="join-btn">
+                <a href="#" class="btn primary-btn">Join Now</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="members">
+            <div class="container">
+                <h2>Our Members</h2>
+                <button id="toggleView" class="btn primary-btn">Toggle View</button>
+                <div id="memberDisplay" class="member-grid"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img class="icon-social" src="img/logo.webp" alt="Chamber of Commerce Logo">
+                </div>
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="membership.html">Membership</a></li>
+                        <li><a href="participate.html">Participate</a></li>
+                        <li><a href="opportunities.html">Opportunities</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <p>Email: info@cc.org</p>
+                    <p>Phone: (555) 123-4567</p>
+                </div>
+                <div class="footer-social">
+                    <a href="#"><img class="icon-social" src="img/fb.png" alt="Facebook"></a>
+                    <a href="#"><img class="icon-social" src="img/x.png" alt="Twitter"></a>
+                    <a href="#"><img class="icon-social" src="img/in.png" alt="LinkedIn"></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Chamber of Commerce. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        async function fetchMembers() {
+            const response = await fetch('data/members.json');
+            const members = await response.json();
+            displayMembers(members);
+        }
+
+        function displayMembers(members) {
+            const memberDisplay = document.getElementById('memberDisplay');
+            memberDisplay.innerHTML = '';
+
+            members.forEach(member => {
+                const memberCard = document.createElement('div');
+                memberCard.className = 'member-card';
+                memberCard.innerHTML = `
+                    <img src="${member.image}" alt="${member.name}">
+                    <h3>${member.name}</h3>
+                    <p>${member.address}</p>
+                    <p>${member.phone}</p>
+                    <p><a href="${member.website}" target="_blank">${member.website}</a></p>
+                    <p>Membership Level: ${member.membership_level}</p>
+                    <p>${member.other_info}</p>
+                `;
+                memberDisplay.appendChild(memberCard);
+            });
+        }
+
+        let isGridView = true;
+
+        document.getElementById('toggleView').addEventListener('click', () => {
+            const memberDisplay = document.getElementById('memberDisplay');
+            if (isGridView) {
+                memberDisplay.classList.remove('member-grid');
+                memberDisplay.classList.add('member-list');
+            } else {
+                memberDisplay.classList.remove('member-list');
+                memberDisplay.classList.add('member-grid');
+            }
+            isGridView = !isGridView;
+        });
+
+        // Fetch members on page load
+        fetchMembers();
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const footerDate = new Date();
+            const footerInfo = `Last modified: ${footerDate.toLocaleDateString()}`;
+            document.querySelector('.footer-bottom p').innerHTML += `<br>${footerInfo}`;
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+[
+    {
+        "name": "Tech Innovations",
+        "address": "123 Tech Lane",
+        "phone": "(555) 111-2222",
+        "website": "https://techinnovations.com",
+        "image": "img/Business.avif",
+        "membership_level": 3,
+        "other_info": "Leading provider of tech solutions."
+    },
+    {
+        "name": "Green Gardens",
+        "address": "456 Green St",
+        "phone": "(555) 333-4444",
+        "website": "https://greengardens.com",
+        "image": "img/Business.avif",
+        "membership_level": 2,
+        "other_info": "Sustainable gardening services."
+    },
+    {
+        "name": "Health Plus",
+        "address": "789 Wellness Blvd",
+        "phone": "(555) 555-6666",
+        "website": "https://healthplus.com",
+        "image": "img/Business.avif",
+        "membership_level": 1,
+        "other_info": "Your health partner."
+    },
+    {
+        "name": "Creative Minds",
+        "address": "321 Art Ave",
+        "phone": "(555) 777-8888",
+        "website": "https://creativeminds.com",
+        "image": "img/Business.avif",
+        "membership_level": 3,
+        "other_info": "Innovative design agency."
+    },
+    {
+        "name": "Finance Gurus",
+        "address": "654 Money St",
+        "phone": "(555) 999-0000",
+        "website": "https://financegurus.com",
+        "image": "img/Business.avif",
+        "membership_level": 2,
+        "other_info": "Financial consulting services."
+    },
+    {
+        "name": "Travel Ventures",
+        "address": "987 Travel Rd, Miami, FL",
+        "phone": "(555) 111-2222",
+        "website": "https://travelventures.com",
+        "image": "img/Business.avif",
+        "membership_level": 1,
+        "other_info": "Your travel experts."
+    },
+    {
+        "name": "Foodies Delight",
+        "address": "159 Cuisine St",
+        "phone": "(555) 333-4444",
+        "website": "https://foodiesdelight.com",
+        "image": "img/Business.avif",
+        "membership_level": 3,
+        "other_info": "Gourmet food services."
+    }
+]

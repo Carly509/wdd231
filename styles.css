@@ -759,6 +759,28 @@ body.opportunities nav ul li a[href="opportunities.html"]::after {
     color: var(--primary-color);
 }
 
+.member-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.member-list {
+    display: block;
+}
+
+.member-card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    text-align: center;
+}
+
+.member-card img {
+    max-width: 100%;
+    height: auto;
+}
+
+
 /* Media Queries for Responsive Design */
 @media screen and (max-width: 992px) {
     .hero .container,
