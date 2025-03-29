@@ -3,82 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chamber of Commerce</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Carly Tesnor - Web Development Portfolio</title>
+    <meta name="description" content="Course home page for Web and Computer Programming">
+    <meta name="author" content="Your Full Name">
+
+    <link href="https://fonts.googleapis.com/css2?family=Font1&family=Font2&display=swap" rel="stylesheet">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/course.css">
+
+    <!-- JavaScript Files -->
+    <script src="js/navigation.js" defer></script>
+    <script src="js/date.js" defer></script>
+    <script src="js/course.js" defer></script>
 </head>
 <body>
     <header>
-        <div class="container">
-            <div class="logo">
-                <img src="img/logo.webp" alt="Chamber of Commerce Logo">
-            </div>
-            <button class="mobile-menu-btn" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="membership.html">Membership</a></li>
-                    <li><a href="directory.html">Directory</a></li>
-                    <li><a href="opportunities.html">Opportunities</a></li>
-                </ul>
-            </nav>
-            <div class="join-btn">
-                <a href="#" class="btn primary-btn">Join Now</a>
-            </div>
-        </div>
+        <img src="images/profile-photo.jpg" alt="Your Profile Photo">
+        <span>Carly</span>
+
+        <nav>
+            <button id="menu-toggle" aria-label="Toggle Menu">☰</button>
+            <ul id="nav-menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="chamber/index.html">Chamber</a></li>
+                <li><a href="github/index.html">GitHub Profile</a></li>
+                <li><a href="linkedin/index.html">LinkedIn</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
-        <section class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <div class="message-bubble">
-                        <p><img src="img/pngwing.com.png" alt="Chat Icon" class="chat-icon"> We would like to hear from you</p>
-                    </div>
-                    <h1>We support passionated and dedicated <span class="degree-symbol">°</span>small local businesses</h1>
-                    <p>CC has a number of committees that help offer quality benefits and opportunities for our members. We always welcome those who want to sit as a committee representative or volunteer their time as a board member.</p>
-                    <a href="#" class="btn secondary-btn">Let's Collaborate <span class="arrow">→</span></a>
-                </div>
-                <div class="hero-image">
-                    <img src="img/meeting.jpg" alt="People at a business networking event">
-                </div>
+        <h1>Home</h1>
+
+        <section id="learning-journey">
+            <h2>Learning Journey</h2>
+            <!-- Content about learning journey -->
+        </section>
+
+        <section id="course-filter">
+            <h2>Courses</h2>
+            <div class="filter-buttons">
+                <button id="all-courses">All Courses</button>
+                <button id="wdd-courses">WDD Courses</button>
+                <button id="cse-courses">CSE Courses</button>
             </div>
+            <div id="course-container"></div>
+            <p>Total Credits: <span id="total-credits">0</span></p>
+        </section>
+
+        <section id="goals">
+            <h2>Goals</h2>
+            <!-- Content about goals -->
         </section>
     </main>
 
     <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <img class="icon-social" src="img/logo.webp" alt="Chamber of Commerce Logo">
-                </div>
-                <div class="footer-links">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="membership.html">Membership</a></li>
-                        <li><a href="participate.html">Participate</a></li>
-                        <li><a href="opportunities.html">Opportunities</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <p>Email: info@cc.org</p>
-                    <p>Phone: (555) 123-4567</p>
-                </div>
-                <div class="footer-social">
-                    <a href="#"><img  class="icon-social" src="img/fb.png" alt="Facebook"></a>
-                    <a href="#"><img class="icon-social" src="img/x.png" alt="Twitter"></a>
-                    <a href="#"><img class="icon-social" src="img/in.png" alt="LinkedIn"></a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Chamber of Commerce. All rights reserved.</p>
-            </div>
-        </div>
+        <p>&copy; <span id="current-year"></span> | Your Name | Your State/Country</p>
+        <p id="lastModified"></p>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
