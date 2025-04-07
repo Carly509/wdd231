@@ -43,34 +43,34 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 
-    const tierCards = document.querySelectorAll('.tier-card');
+    // const tierCards = document.querySelectorAll('.tier-card');
 
-    tierCards.forEach(card => {
-        card.addEventListener('click', function() {
+    // tierCards.forEach(card => {
+    //     card.addEventListener('click', function() {
 
-            tierCards.forEach(c => c.classList.remove('selected'));
+    //         tierCards.forEach(c => c.classList.remove('selected'));
 
-            this.classList.add('selected');
+    //         this.classList.add('selected');
 
 
-            if (!document.querySelector('.selection-message')) {
-                const tierName = this.querySelector('h3').textContent;
-                const selectionMessage = document.createElement('div');
-                selectionMessage.className = 'selection-message';
-                selectionMessage.innerHTML = `
-                    <p>You've selected the <strong>${tierName}</strong>. Click the button below to proceed with your registration.</p>
-                    <a href="#" class="btn primary-btn continue-btn">Continue to Registration</a>
-                `;
-                document.querySelector('.tier-cards').insertAdjacentElement('afterend', selectionMessage);
-            } else {
+    //         if (!document.querySelector('.selection-message')) {
+    //             const tierName = this.querySelector('h3').textContent;
+    //             const selectionMessage = document.createElement('div');
+    //             selectionMessage.className = 'selection-message';
+    //             selectionMessage.innerHTML = `
+    //                 <p>You've selected the <strong>${tierName}</strong>. Click the button below to proceed with your registration.</p>
+    //                 <a href="#" class="btn primary-btn continue-btn">Continue to Registration</a>
+    //             `;
+    //             document.querySelector('.tier-cards').insertAdjacentElement('afterend', selectionMessage);
+    //         } else {
 
-                const tierName = this.querySelector('h3').textContent;
-                document.querySelector('.selection-message p').innerHTML = `
-                    <p>You've selected the <strong>${tierName}</strong>. Click the button below to proceed with your registration.</p>
-                `;
-            }
-        });
-    });
+    //             const tierName = this.querySelector('h3').textContent;
+    //             document.querySelector('.selection-message p').innerHTML = `
+    //                 <p>You've selected the <strong>${tierName}</strong>. Click the button below to proceed with your registration.</p>
+    //             `;
+    //         }
+    //     });
+    // });
 
     const courses = [
         {
