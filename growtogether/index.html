@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Garden Initiative - Site Plan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Color Schema Application */
+        :root {
+            --primary-color: #4a7c59; /* Green */
+            --secondary-color: #f4a259; /* Orange */
+            --accent-color: #8b5e83; /* Purple */
+            --text-color: #333333;
+            --background-color: #f8f8f8;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary-color);
+        }
+
+        header h1 {
+            color: var(--white);
+        }
+
+        section {
+            margin: 30px 0;
+            padding: 20px;
+            background-color: var(--white);
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .color-sample {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .color-box {
+            width: 200px;
+            height: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        .wireframes {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .wireframe-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .wireframe {
+            border: 2px solid var(--primary-color);
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .wireframe img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .wireframe-mobile {
+            width: 300px;
+        }
+
+        .wireframe-desktop {
+            width: 600px;
+        }
+
+        .scenario {
+            background-color: rgba(74, 124, 89, 0.1);
+            padding: 15px;
+            border-left: 5px solid var(--primary-color);
+            margin: 15px 0;
+        }
+
+        .font-sample {
+            margin: 20px 0;
+        }
+
+        .montserrat {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .open-sans {
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .button {
+            background-color: var(--secondary-color);
+            color: var(--white);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            margin: 10px 0;
+            display: inline-block;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 5px;
+        }
+
+        /* Responsive design */
+        @media screen and (max-width: 768px) {
+            .wireframe-desktop {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Community Garden Initiative</h1>
+        <p>Site Plan Document</p>
+    </header>
+
+    <main>
+        <section id="site-name">
+            <h2>1. Site Name</h2>
+            <p><strong>GrowTogether</strong> - This name was selected because it represents both the literal growing of plants and the metaphorical growth of community connections through gardening. It embodies the collaborative nature of community gardening while being memorable and positive.</p>
+            <p>Optional domain availability: <code>growtogether.org</code></p>
+        </section>
+
+        <section id="site-purpose">
+            <h2>2. Site Purpose</h2>
+            <p>The GrowTogether website serves as a central hub for the Community Garden Initiative. Its purpose is to inform community members about sustainable gardening practices, coordinate volunteer efforts, facilitate knowledge sharing, and build a network of local gardeners. The site provides educational resources, event information, and community engagement opportunities to promote urban agriculture and environmental stewardship.</p>
+        </section>
+
+        <section id="scenarios">
+            <h2>3. Scenarios</h2>
+            <div class="scenario">
+                <p><strong>Scenario 1:</strong> "I'm new to gardening and want to start growing vegetables in my backyard. What resources are available to help me get started?"</p>
+            </div>
+            <div class="scenario">
+                <p><strong>Scenario 2:</strong> "I'm interested in joining a community garden plot. How do I sign up and what are the membership requirements?"</p>
+            </div>
+            <div class="scenario">
+                <p><strong>Scenario 3:</strong> "When is the next community seed-sharing event, and how can I participate or volunteer?"</p>
+            </div>
+        </section>
+
+        <section id="color-schema">
+            <h2>4. Color Schema</h2>
+            <p>The color scheme reflects the natural environment of gardens while maintaining good contrast for accessibility.</p>
+
+            <div class="color-sample">
+                <div class="color-box" style="background-color: var(--primary-color);">
+                    Primary Color<br>#4A7C59
+                </div>
+                <div class="color-box" style="background-color: var(--secondary-color);">
+                    Secondary Color<br>#F4A259
+                </div>
+                <div class="color-box" style="background-color: var(--accent-color);">
+                    Accent Color<br>#8B5E83
+                </div>
+                <div class="color-box" style="background-color: var(--text-color); color: white;">
+                    Text Color<br>#333333
+                </div>
+            </div>
+
+            <h3>Color Usage:</h3>
+            <ul>
+                <li><strong>Primary Color (Green):</strong> Headers, navigation, footer, and primary buttons</li>
+                <li><strong>Secondary Color (Orange):</strong> Call-to-action buttons, highlighted content, and important notices</li>
+                <li><strong>Accent Color (Purple):</strong> Selected items, links, and decorative elements</li>
+                <li><strong>Text Color:</strong> Body text and content</li>
+            </ul>
+        </section>
+
+        <section id="typography">
+            <h2>5. Typography</h2>
+            <p>The typography selections provide good readability while maintaining a clean, modern look that resonates with environmental themes.</p>
+
+            <div class="font-sample">
+                <h3 class="montserrat">Montserrat</h3>
+                <p class="montserrat">This font will be used for all headings (h1, h2, h3) to provide a clean, modern look with good readability.</p>
+                <p class="montserrat" style="font-weight: 700;">Example of Montserrat Bold for emphasis</p>
+            </div>
+
+            <div class="font-sample">
+                <h3 class="open-sans">Open Sans</h3>
+                <p class="open-sans">This font will be used for body text and general content. It offers excellent readability at various sizes and works well for both digital and print.</p>
+                <p class="open-sans" style="font-weight: 600;">Example of Open Sans Semibold for sub-headings</p>
+            </div>
+        </section>
+
+        <section id="wireframe">
+            <h2>6. Wireframes</h2>
+            <p>These wireframes represent the basic layout structure for the homepage in both mobile and desktop views.</p>
+
+            <div class="wireframes">
+                <div class="wireframe-container">
+                    <div class="wireframe wireframe-mobile">
+                        <h3>Mobile View</h3>
+                        <div style="background-color: #eee; padding: 10px;">
+                            <div style="background-color: var(--primary-color); color: white; padding: 10px; text-align: center;">Logo & Navigation Toggle</div>
+                            <div style="height: 150px; background-color: var(--secondary-color); margin: 10px 0; display: flex; justify-content: center; align-items: center; color: white;">Hero Image & Tagline</div>
+                            <div style="height: 100px; background-color: white; margin: 10px 0; border: 1px solid #ddd; padding: 10px;">About Section</div>
+                            <div style="height: 150px; background-color: white; margin: 10px 0; border: 1px solid #ddd; padding: 10px;">Featured Events</div>
+                            <div style="height: 120px; background-color: white; margin: 10px 0; border: 1px solid #ddd; padding: 10px;">Resources Preview</div>
+                            <div style="height: 80px; background-color: white; margin: 10px 0; border: 1px solid #ddd; padding: 10px;">Newsletter Signup</div>
+                            <div style="background-color: var(--primary-color); color: white; padding: 10px; text-align: center;">Footer & Social Links</div>
+                        </div>
+                    </div>
+
+                    <div class="wireframe wireframe-desktop">
+                        <h3>Desktop View</h3>
+                        <div style="background-color: #eee; padding: 10px;">
+                            <div style="background-color: var(--primary-color); color: white; padding: 10px; display: flex; justify-content: space-between;">
+                                <span>Logo</span>
+                                <span>Navigation Links</span>
+                            </div>
+                            <div style="height: 200px; background-color: var(--secondary-color); margin: 10px 0; display: flex; justify-content: center; align-items: center; color: white;">Hero Image & Call to Action</div>
+                            <div style="display: flex; margin: 10px 0; gap: 10px;">
+                                <div style="flex: 1; height: 150px; background-color: white; border: 1px solid #ddd; padding: 10px;">About Us</div>
+                                <div style="flex: 1; height: 150px; background-color: white; border: 1px solid #ddd; padding: 10px;">Mission Statement</div>
+                            </div>
+                            <div style="display: flex; margin: 10px 0; gap: 10px;">
+                                <div style="flex: 2; height: 200px; background-color: white; border: 1px solid #ddd; padding: 10px;">Featured Events & Calendar</div>
+                                <div style="flex: 1; height: 200px; background-color: white; border: 1px solid #ddd; padding: 10px;">Latest Blog Posts</div>
+                            </div>
+                            <div style="display: flex; margin: 10px 0; gap: 10px;">
+                                <div style="flex: 1; height: 100px; background-color: white; border: 1px solid #ddd; padding: 10px;">Garden Resources</div>
+                                <div style="flex: 1; height: 100px; background-color: white; border: 1px solid #ddd; padding: 10px;">Community Forum Preview</div>
+                                <div style="flex: 1; height: 100px; background-color: white; border: 1px solid #ddd; padding: 10px;">Newsletter Signup</div>
+                            </div>
+                            <div style="background-color: var(--primary-color); color: white; padding: 10px; display: flex; justify-content: space-between;">
+                                <span>Contact Info</span>
+                                <span>Social Links</span>
+                                <span>Copyright</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="content-proposal">
+            <h2>7. Content Structure</h2>
+            <p>Based on the project proposal, the website will consist of the following pages:</p>
+
+            <h3>Home Page:</h3>
+            <ul>
+                <li>Introduction to the Community Garden Initiative</li>
+                <li>Highlight upcoming projects and volunteer opportunities</li>
+                <li>Featured events and news</li>
+                <li>Quick links to resources and registration</li>
+            </ul>
+
+            <h3>About Us:</h3>
+            <ul>
+                <li>Mission statement and goals</li>
+                <li>History of the initiative</li>
+                <li>Profiles of founders and key volunteers</li>
+                <li>Community impact statistics</li>
+            </ul>
+
+            <h3>Get Involved:</h3>
+            <ul>
+                <li>Membership information</li>
+                <li>Volunteer opportunities</li>
+                <li>Donation options</li>
+                <li>Contact form for inquiries</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 GrowTogether Community Garden Initiative | Site Plan Document</p>
+    </footer>
+</body>
+</html>
