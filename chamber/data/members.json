@@ -6,7 +6,7 @@
         "website": "https://techinnovations.com",
         "image": "img/Business.avif",
         "membership_level": 3,
-        "other_info": "Leading provider of tech solutions."
+        "description": "Leading provider of tech solutions."
     },
     {
         "name": "Green Gardens",
@@ -15,7 +15,7 @@
         "website": "https://greengardens.com",
         "image": "img/Business.avif",
         "membership_level": 2,
-        "other_info": "Sustainable gardening services."
+        "description": "Sustainable gardening services."
     },
     {
         "name": "Health Plus",
@@ -24,7 +24,7 @@
         "website": "https://healthplus.com",
         "image": "img/Business.avif",
         "membership_level": 1,
-        "other_info": "Your health partner."
+        "description": "Your health partner."
     },
     {
         "name": "Creative Minds",
@@ -33,7 +33,7 @@
         "website": "https://creativeminds.com",
         "image": "img/Business.avif",
         "membership_level": 3,
-        "other_info": "Innovative design agency."
+        "description": "Innovative design agency."
     },
     {
         "name": "Finance Gurus",
@@ -42,7 +42,7 @@
         "website": "https://financegurus.com",
         "image": "img/Business.avif",
         "membership_level": 2,
-        "other_info": "Financial consulting services."
+        "description": "Financial consulting services."
     },
     {
         "name": "Travel Ventures",
@@ -51,7 +51,7 @@
         "website": "https://travelventures.com",
         "image": "img/Business.avif",
         "membership_level": 1,
-        "other_info": "Your travel experts."
+        "description": "Your travel experts."
     },
     {
         "name": "Foodies Delight",
@@ -60,6 +60,6 @@
         "website": "https://foodiesdelight.com",
         "image": "img/Business.avif",
         "membership_level": 3,
-        "other_info": "Gourmet food services."
+        "description": "Gourmet food services."
     }
 ]

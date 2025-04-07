@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover - Mount Pearl Paradise Chamber of Commerce</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="grid-container">
+        <header>
+            <div class="container">
+                <div class="logo">
+                    <img src="img/logo.webp" alt="Chamber of Commerce Logo">
+                </div>
+                <button class="mobile-menu-btn" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="join.html">Join</a></li>
+                        <li><a href="directory.html">Directory</a></li>
+                        <li><a href="discover.html">Discover</a></li>
+                    </ul>
+                </nav>
+                <div class="join-btn">
+                    <a href="join.html" class="btn primary-btn">Join Now</a>
+                </div>
+            </div>
+        </header>
+
+        <aside style="grid-area: sidebar;">
+            <div id="visitor-message"></div>
+        </aside>
+
+        <main style="grid-area: content;">
+            <h2>Discover Our Area</h2>
+            <div class="cards" id="cards-container"></div>
+        </main>
+
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <img class="icon-social" src="img/logo.webp" alt="Chamber of Commerce Logo">
+                    </div>
+                    <div class="footer-links">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="join.html" class="active">Join</a></li>
+                            <li><a href="directory.html">Directory</a></li>
+                            <li><a href="discover.html">Discover</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-contact">
+                        <p>Email: info@cc.org</p>
+                        <p>Phone: (555) 123-4567</p>
+                        <p>Address: 123 Main St, Anytown, US 12345</p>
+                    </div>
+                    <div class="footer-social">
+                        <a href="#"><img class="icon-social" src="img/fb.png" alt="Facebook"></a>
+                        <a href="#"><img class="icon-social" src="img/x.png" alt="Twitter"></a>
+                        <a href="#"><img class="icon-social" src="img/in.png" alt="LinkedIn"></a>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p id="footer-year">&copy; 2025 Chamber of Commerce. All rights reserved.</p>
+                    <p id="last-modified">Last Updated: </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Function to fetch JSON data
+        async function fetchData() {
+            try {
+                const response = await fetch('data/members.json');
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                const items = await response.json();
+                displayCards(items);
+            } catch (error) {
+                console.error('There was a problem with the fetch operation:', error);
+            }
+        }
+
+        // Function to display cards
+        function displayCards(items) {
+            const container = document.getElementById('cards-container');
+            items.forEach((item, index) => {
+                const card = document.createElement('div');
+                card.className = 'card';
+                card.style.gridArea = `card${index + 1}`;
+                card.innerHTML = `
+                    <h2>${item.name}</h2>
+                    <figure>
+                        <img src="${item.image}" alt="${item.name}">
+                    </figure>
+                    <address>${item.address}</address>
+                    <p>${item.description}</p>
+                    <button>Learn More</button>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        // LocalStorage for last visit date
+        const lastVisit = localStorage.getItem('lastVisit');
+        const currentDate = Date.now();
+        localStorage.setItem('lastVisit', currentDate);
+
+        let visitorMessage = '';
+
+        if (!lastVisit) {
+            visitorMessage = "Welcome! Let us know if you have any questions.";
+        } else {
+            const daysSinceLastVisit = Math.floor((currentDate - lastVisit) / (1000 * 60 * 60 * 24));
+            if (daysSinceLastVisit < 1) {
+                visitorMessage = "Back so soon! Awesome!";
+            } else {
+                visitorMessage = `You last visited ${daysSinceLastVisit} ${daysSinceLastVisit === 1 ? 'day' : 'days'} ago.`;
+            }
+        }
+
+        document.getElementById('visitor-message').innerText = visitorMessage;
+
+        // Fetch and display the cards
+        fetchData();
+    </script>
+
+</body>
+</html>
