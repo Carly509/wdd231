@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Join GrowTogether - Volunteer opportunities and ways to participate in community gardening">
+
+    <!-- Social Media Meta Tags -->
+    <meta property="og:title" content="Get Involved with GrowTogether">
+    <meta property="og:description" content="Find out how you can contribute to your community through gardening">
+    <meta property="og:image" content="images/og-image.jpg">
+    <meta property="og:url" content="https://growtogether.org/get-involved">
+
+    <title>Get Involved - GrowTogether</title>
+
+    <!-- Same head content as other pages -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/utilities.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+    <header class="header">
+        <!-- Same navigation as other pages -->
+    </header>
+
+    <main>
+        <!-- Get Involved Hero -->
+        <section class="page-hero">
+            <div class="container">
+                <h1>Get Involved</h1>
+                <p>Join our community and make a difference</p>
+            </div>
+        </section>
+
+        <!-- Volunteer Opportunities -->
+        <section class="opportunities-section">
+            <div class="container">
+                <h2>Ways to Participate</h2>
+                <div class="opportunities-grid">
+                    <div class="opportunity-card">
+                        <img src="images/volunteer1.jpg" alt="Garden volunteer" loading="lazy">
+                        <h3>Garden Volunteer</h3>
+                        <p>Help maintain our community gardens and learn valuable gardening skills.</p>
+                        <button class="btn btn-primary opportunity-btn" data-opportunity="garden">Learn More</button>
+                    </div>
+                    <div class="opportunity-card">
+                        <img src="images/volunteer2.jpg" alt="Education volunteer" loading="lazy">
+                        <h3>Education Program</h3>
+                        <p>Share your knowledge or learn from experienced gardeners.</p>
+                        <button class="btn btn-primary opportunity-btn" data-opportunity="education">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Registration Form -->
+        <section class="registration-section">
+            <div class="container">
+                <h2>Join Our Community</h2>
+                <form id="registration-form" class="form">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="interest">Area of Interest</label>
+                        <select id="interest" name="interest" required>
+                            <option value="">Select an option</option>
+                            <option value="gardening">Gardening</option>
+                            <option value="education">Education</option>
+                            <option value="events">Event Planning</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message (Optional)</label>
+                        <textarea id="message" name="message" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit Registration</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Upcoming Events -->
+        <section class="events-section">
+            <div class="container">
+                <h2>Upcoming Volunteer Events</h2>
+                <div class="events-grid" id="events-container">
+                    <!-- Events will be loaded dynamically -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Same footer as other pages -->
+    <footer class="footer">
+        <!-- Footer content -->
+    </footer>
+
+    <!-- Modal for opportunity details -->
+    <div id="modal" class="modal">
+        <div class="modal__content">
+            <button class="modal__close" aria-label="Close modal">&times;</button>
+            <div id="modal-content"></div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
