@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Join GrowTogether - Volunteer opportunities and ways to participate in community gardening">
 
-    <!-- Social Media Meta Tags -->
     <meta property="og:title" content="Get Involved with GrowTogether">
     <meta property="og:description" content="Find out how you can contribute to your community through gardening">
     <meta property="og:image" content="images/og-image.jpg">
@@ -13,7 +12,6 @@
 
     <title>Get Involved - GrowTogether</title>
 
-    <!-- Same head content as other pages -->
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/utilities.css">
@@ -21,11 +19,26 @@
 </head>
 <body>
     <header class="header">
-        <!-- Same navigation as other pages -->
+        <nav class="nav container">
+            <a href="index.html" class="nav__logo">
+                <img src="images/logo.jpg" alt="GrowTogether Logo" width="150" height="40">
+            </a>
+
+            <button class="nav__toggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav__menu">
+                <li><a href="index.html" class="nav__link active">Home</a></li>
+                <li><a href="about.html" class="nav__link">About</a></li>
+                <li><a href="get-involved.html" class="nav__link">Get Involved</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
-        <!-- Get Involved Hero -->
         <section class="page-hero">
             <div class="container">
                 <h1>Get Involved</h1>
@@ -33,19 +46,18 @@
             </div>
         </section>
 
-        <!-- Volunteer Opportunities -->
         <section class="opportunities-section">
             <div class="container">
                 <h2>Ways to Participate</h2>
                 <div class="opportunities-grid">
                     <div class="opportunity-card">
-                        <img src="images/volunteer1.jpg" alt="Garden volunteer" loading="lazy">
+                        <img src="images/gardenv.jpg" style="width: 300px;" alt="Garden volunteer" loading="lazy">
                         <h3>Garden Volunteer</h3>
                         <p>Help maintain our community gardens and learn valuable gardening skills.</p>
                         <button class="btn btn-primary opportunity-btn" data-opportunity="garden">Learn More</button>
                     </div>
                     <div class="opportunity-card">
-                        <img src="images/volunteer2.jpg" alt="Education volunteer" loading="lazy">
+                        <img src="images/edv.jpeg" style="width: 300px;" alt="Education volunteer" loading="lazy">
                         <h3>Education Program</h3>
                         <p>Share your knowledge or learn from experienced gardeners.</p>
                         <button class="btn btn-primary opportunity-btn" data-opportunity="education">Learn More</button>
@@ -54,11 +66,10 @@
             </div>
         </section>
 
-        <!-- Registration Form -->
         <section class="registration-section">
             <div class="container">
                 <h2>Join Our Community</h2>
-                <form id="registration-form" class="form">
+                <form id="registration-form" class="form" action="form-success.html" method="POST">
                     <div class="form-group">
                         <label for="name">Full Name</label>
                         <input type="text" id="name" name="name" required>
@@ -90,7 +101,6 @@
             </div>
         </section>
 
-        <!-- Upcoming Events -->
         <section class="events-section">
             <div class="container">
                 <h2>Upcoming Volunteer Events</h2>
@@ -101,12 +111,36 @@
         </section>
     </main>
 
-    <!-- Same footer as other pages -->
     <footer class="footer">
-        <!-- Footer content -->
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__info">
+                    <h3>GrowTogether</h3>
+                    <p>Building sustainable communities through gardening</p>
+                </div>
+                <div class="footer__links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="get-involved.html">Get Involved</a></li>
+                        <li><a href="#events">Events</a></li>
+                    </ul>
+                </div>
+                <div class="footer__social">
+                    <h4>Connect With Us</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2025 GrowTogether. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
 
-    <!-- Modal for opportunity details -->
     <div id="modal" class="modal">
         <div class="modal__content">
             <button class="modal__close" aria-label="Close modal">&times;</button>

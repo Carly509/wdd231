@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Successful - GrowTogether</title>
+
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/utilities.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+    <header class="header">
+        <!-- Same header as other pages -->
+        <nav class="nav container">
+            <a href="index.html" class="nav__logo">
+                <img src="images/logo.jpg" alt="GrowTogether Logo" width="150" height="40">
+            </a>
+
+            <button class="nav__toggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav__menu">
+                <li><a href="index.html" class="nav__link">Home</a></li>
+                <li><a href="about.html" class="nav__link">About</a></li>
+                <li><a href="get-involved.html" class="nav__link">Get Involved</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="success-section">
+            <div class="container">
+                <h1>Registration Successful!</h1>
+                <div id="form-data-display" class="form-data-card">
+                    <!-- Form data will be displayed here -->
+                </div>
+                <div class="success-actions">
+                    <a href="index.html" class="btn btn-secondary">Return Home</a>
+                    <a href="get-involved.html" class="btn btn-primary">Register Another</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Same footer as other pages -->
+    <footer class="footer">
+        <!-- Footer content -->
+    </footer>
+
+    <script>
+        // Display form data
+        document.addEventListener('DOMContentLoaded', () => {
+            const formData = JSON.parse(localStorage.getItem('formSubmission'));
+            const dataDisplay = document.getElementById('form-data-display');
+
+            if (formData) {
+                dataDisplay.innerHTML = `
+                    <h2>Registration Details:</h2>
+                    <div class="form-data-grid">
+                        <div class="form-data-item">
+                            <strong>Name:</strong>
+                            <span>${formData.name}</span>
+                        </div>
+                        <div class="form-data-item">
+                            <strong>Email:</strong>
+                            <span>${formData.email}</span>
+                        </div>
+                        <div class="form-data-item">
+                            <strong>Phone:</strong>
+                            <span>${formData.phone || 'Not provided'}</span>
+                        </div>
+                        <div class="form-data-item">
+                            <strong>Interest:</strong>
+                            <span>${formData.interest}</span>
+                        </div>
+                        ${formData.message ? `
+                            <div class="form-data-item full-width">
+                                <strong>Message:</strong>
+                                <span>${formData.message}</span>
+                            </div>
+                        ` : ''}
+                    </div>
+                `;
+            } else {
+                dataDisplay.innerHTML = `
+                    <p>No registration data found. Please submit the registration form.</p>
+                    <a href="get-involved.html" class="btn btn-primary">Go to Registration</a>
+                `;
+            }
+        });
+    </script>
+</body>
+</html>

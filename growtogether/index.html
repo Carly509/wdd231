@@ -5,23 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="GrowTogether - Community Garden Initiative promoting sustainable gardening and community engagement">
 
-    <!-- Social Media Meta Tags -->
-    <meta property="og:title" content="GrowTogether - Community Garden Initiative">
-    <meta property="og:description" content="Join our community garden initiative and learn about sustainable gardening practices">
-    <meta property="og:image" content="images/og-image.jpg">
-    <meta property="og:url" content="https://growtogether.org">
-
     <title>GrowTogether - Community Garden Initiative</title>
 
-    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 
-    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/utilities.css">
     <link rel="stylesheet" href="css/components.css">
@@ -30,7 +23,7 @@
     <header class="header">
         <nav class="nav container">
             <a href="index.html" class="nav__logo">
-                <img src="images/logo.svg" alt="GrowTogether Logo" width="150" height="40">
+                <img src="images/logo.jpg" alt="GrowTogether Logo" width="150" height="40">
             </a>
 
             <button class="nav__toggle" aria-label="Toggle Menu">
@@ -48,7 +41,6 @@
     </header>
 
     <main>
-        <!-- Hero Section -->
         <section class="hero">
             <div class="container">
                 <h1>Growing Community Through Gardening</h1>
@@ -58,29 +50,33 @@
         </section>
 
         <!-- Featured Plants Section -->
-        <section class="plants-section" id="featured-plants">
+        <section class="plants-section">
             <div class="container">
                 <h2>Featured Plants</h2>
-                <div class="plants-grid" id="plants-container">
+                <div id="loading-spinner" class="spinner">
+                    <div class="spinner-border" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+                <div id="plants-container" class="plants-grid">
                     <!-- Plants will be loaded dynamically -->
                 </div>
             </div>
         </section>
 
-        <!-- Upcoming Events Section -->
         <section class="events-section">
             <div class="container">
                 <h2>Upcoming Events</h2>
-                <div class="events-grid" id="events-container">
+                <div id="events-container" class="events-grid">
                     <!-- Events will be loaded dynamically -->
                 </div>
             </div>
         </section>
 
-        <!-- Newsletter Section -->
         <section class="newsletter-section">
             <div class="container">
                 <h2>Stay Connected</h2>
+                <p>Subscribe to our newsletter for gardening tips and community updates</p>
                 <form id="newsletter-form" class="form">
                     <div class="form-group">
                         <input type="email" id="email" name="email" required
@@ -122,7 +118,6 @@
         </div>
     </footer>
 
-    <!-- Modal Template -->
     <div id="modal" class="modal">
         <div class="modal__content">
             <button class="modal__close" aria-label="Close modal">&times;</button>
@@ -130,7 +125,6 @@
         </div>
     </div>
 
-    <!-- Scripts -->
     <script type="module" src="js/main.js"></script>
 </body>
 </html>
